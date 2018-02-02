@@ -29,8 +29,12 @@ public class Controller {
         }else{
             showResult("Vale");
         }
-        selectData();
-        showRequestInput();
+        if(laused.isEmpty()){
+            showResult("Sõnad otsas");
+        }else {
+            selectData();
+            showRequestInput();
+        }
     }
 
     private void showResult(String result) {
@@ -51,7 +55,11 @@ public class Controller {
         Random random = new Random();
         int randIndex;
 
-        randIndex = random.nextInt(laused.size()-1);
+        if(laused.size()>1) {
+            randIndex = random.nextInt(laused.size() - 1);
+        }else{
+            randIndex = 0;
+        }
 
         selectedLause = laused.remove(randIndex);
 
