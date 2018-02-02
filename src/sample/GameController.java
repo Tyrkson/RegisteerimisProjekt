@@ -1,14 +1,20 @@
 package sample;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class Controller {
+public class GameController {
 
     private ArrayList<String> laused;
 
@@ -16,8 +22,10 @@ public class Controller {
 
     private String file = "andmed.txt";
 
+    private long startTimeinMillis, timeNow;
+
     @FXML
-    Label LRequestedInput, LResult;
+    Label LRequestedInput, LResult, lTime;
 
     @FXML
     TextField TfInput;
@@ -45,6 +53,28 @@ public class Controller {
         loadDataFromFileToList();
         selectData();
         showRequestInput();
+        createTimer();
+    }
+
+    private void createTimer() {
+        startTimeinMillis = System.currentTimeMillis();
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e ->{
+            updateTime(getTime());
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
+
+    }
+
+    private int getTime() {
+        timeNow = System.currentTimeMillis();
+        return (int) (timeNow-startTimeinMillis)/1000;
+    }
+
+    private void updateTime(int time) {
+        lTime.setText(String.valueOf(time));
     }
 
     private void showRequestInput() {
