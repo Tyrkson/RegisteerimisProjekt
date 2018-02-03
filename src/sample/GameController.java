@@ -24,8 +24,6 @@ public class GameController {
 
     private String file = "andmed.txt";
 
-    private long startTimeinMillis, timeNow;
-
     Timeline timeline, inputPaneAnimation;
 
     private int globalPace = -15;
@@ -45,7 +43,10 @@ public class GameController {
         }
         if(laused.isEmpty()){
             showResult("Sõnad otsas");
-            stopTimer();
+            if(GameStopper.isRunning()) {
+                stopTimer();
+                lTime.setText(String.valueOf(GameStopper.getTimeInSecs()));
+            }
         }else {
             selectData();
             showRequestInput();
@@ -53,8 +54,9 @@ public class GameController {
     }
 
     private void stopTimer() {
-        timeline.stop();
+        GameStopper.stop();
     }
+
 
     private void showResult(String result) {
         LResult.setText(result);
@@ -64,46 +66,16 @@ public class GameController {
         loadDataFromFileToList();
         selectData();
         showRequestInput();
-        createTimer();
     }
 
-    private void createTimer() {
-        startTimeinMillis = System.currentTimeMillis();
 
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), e ->{
-            updateTime(getTime());
-        }));
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
-
-
-    }
-
-    private int getTime() {
-        timeNow = System.currentTimeMillis();
-        return (int) (timeNow-startTimeinMillis)/1000;
-    }
-
-    private void updateTime(int time) {
-        lTime.setText(String.valueOf(time));
-    }
 
     private void showRequestInput() {
         LRequestedInput.setText(selectedLause);
     }
 
     private void selectData() {
-        Random random = new Random();
-        int randIndex;
-
-        if(laused.size()>1) {
-            randIndex = random.nextInt(laused.size() - 1);
-        }else{
-            randIndex = 0;
-        }
-
-        selectedLause = laused.remove(randIndex);
-
+        selectedLause = laused.remove(RandomSelector.select(laused));
     }
 
     private void loadDataFromFileToList() {
