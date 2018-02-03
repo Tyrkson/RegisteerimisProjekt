@@ -51,6 +51,7 @@ public class UnlockScreenController {
         loadPatternDataFromFileToList();
         selectPattern();
         showRequestedPattern();
+
         createCircleList();
 
         patternPane.setOnMouseDragged(e->{
@@ -204,7 +205,7 @@ public class UnlockScreenController {
         for(String i: selectedPattern){
             pattern += i + " ";
         }
-       // lRequestedPattern.setText(pattern);
+        lRequestedPattern.setText(pattern);
     }
 
     private boolean checkUserPattern(ArrayList<Circle> userPattern){
