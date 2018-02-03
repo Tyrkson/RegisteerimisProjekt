@@ -4,13 +4,32 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="430.0" style="-fx-background-color: #213049;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
    <children>
-      <Label fx:id="LRequestedInput" layoutX="74.0" layoutY="49.0" prefHeight="17.0" prefWidth="149.0" text="Registreeri järelevastamisse" />
-      <TextField fx:id="TfInput" layoutX="73.0" layoutY="97.0" />
-      <Label fx:id="LResult" layoutX="117.0" layoutY="227.0" text="Tulemused:" />
-      <Label fx:id="lTime" layoutX="240.0" layoutY="14.0" text="AEG" />
-      <Button layoutX="110.0" layoutY="153.0" mnemonicParsing="false" onAction="#checkUserInput" prefHeight="25.0" prefWidth="68.0" text="Button" />
+      <AnchorPane fx:id="gamePane" layoutX="67.0" prefHeight="497.0" prefWidth="280.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="LRequestedInput" layoutX="74.0" layoutY="49.0" prefHeight="17.0" prefWidth="149.0" text="Registreeri järelevastamisse" />
+            <TextField fx:id="TfInput" layoutX="73.0" layoutY="97.0" />
+            <Label fx:id="LResult" layoutX="117.0" layoutY="227.0" text="Tulemused:" />
+            <Label fx:id="lTime" layoutX="222.0" layoutY="10.0" text="AEG" />
+            <Button layoutX="110.0" layoutY="153.0" mnemonicParsing="false" onAction="#checkUserInput" prefHeight="25.0" prefWidth="68.0" text="Button" />
+            <AnchorPane fx:id="inputPane" layoutX="100.0" minHeight="400.0" minWidth="0.0" opacity="0.56" prefHeight="497.0" prefWidth="0.0" style="-fx-background-color: #7790ba;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="Label" textFill="#36a847" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="0.0" text="Label" textFill="#d72929" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="365.0" layoutY="14.0" mnemonicParsing="false" onAction="#executeInputPaneAnimation" text="?" />
    </children>
 </AnchorPane>

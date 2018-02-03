@@ -6,6 +6,8 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 import java.io.*;
@@ -24,7 +26,9 @@ public class GameController {
 
     private long startTimeinMillis, timeNow;
 
-    private Timeline timeline;
+    Timeline timeline, inputPaneAnimation;
+
+    private int globalPace = -15;
 
     @FXML
     Label LRequestedInput, LResult, lTime;
@@ -121,6 +125,46 @@ public class GameController {
 
     }
 
+    @FXML
+    private Pane inputPane;
+
+    @FXML
+    private AnchorPane gamePane;
+
+    @FXML
+    public void executeInputPaneAnimation(){
+
+        if(inputPaneAnimation != null && inputPaneAnimation.getStatus() == Animation.Status.RUNNING){
+            stopInputPaneAnimation();
+        }
+
+        globalPace *= -1;
+
+        changeInputPaneState();
+    }
+
+    private void changeInputPaneState() {
+        inputPaneAnimation = new Timeline(new KeyFrame(Duration.millis(15), e->{
+            double newWidth = inputPane.getWidth() + globalPace;
+            inputPane.setMinWidth(newWidth);
+
+            if(newWidth >= gamePane.getWidth() || newWidth <= 0){
+                if(newWidth > gamePane.getWidth()){
+                    inputPane.setMinWidth(gamePane.getWidth());
+                }
+                if(newWidth < 0){
+                    inputPane.setMinWidth(0);
+                }
+                stopInputPaneAnimation();
+            }
+        }));
+        inputPaneAnimation.setCycleCount(Animation.INDEFINITE);
+        inputPaneAnimation.play();
+    }
+
+    private void stopInputPaneAnimation() {
+        inputPaneAnimation.stop();
+    }
 
 
 }
