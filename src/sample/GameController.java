@@ -24,6 +24,8 @@ public class GameController {
 
     private long startTimeinMillis, timeNow;
 
+    private Timeline timeline;
+
     @FXML
     Label LRequestedInput, LResult, lTime;
 
@@ -39,10 +41,15 @@ public class GameController {
         }
         if(laused.isEmpty()){
             showResult("Sõnad otsas");
+            stopTimer();
         }else {
             selectData();
             showRequestInput();
         }
+    }
+
+    private void stopTimer() {
+        timeline.stop();
     }
 
     private void showResult(String result) {
@@ -59,7 +66,7 @@ public class GameController {
     private void createTimer() {
         startTimeinMillis = System.currentTimeMillis();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e ->{
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), e ->{
             updateTime(getTime());
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
