@@ -7,12 +7,12 @@ public class RandomSelector {
 
     private RandomSelector(){}
 
-    public static int select(ArrayList aList){
+    public static int select(int size){
         Random random = new Random();
         int randIndex;
 
-        if(aList.size()>1) {
-            randIndex = random.nextInt(aList.size() - 1);
+        if(size > 1) {
+            randIndex = random.nextInt(size - 1);
         }else{
             randIndex = 0;
         }

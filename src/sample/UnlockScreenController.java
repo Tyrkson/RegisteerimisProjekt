@@ -128,7 +128,6 @@ public class UnlockScreenController {
         line.setStroke(Color.WHITE);
         line.setStrokeWidth(10);
 
-        System.out.println("Drawn");
         patternPane.getChildren().add(line);
         lines.add(line);
     }
@@ -154,7 +153,7 @@ public class UnlockScreenController {
     }
 
     private void selectPattern() {
-        selectedPattern = patterns.get(RandomSelector.select(patterns));
+        selectedPattern = patterns.get(RandomSelector.select(patterns.size()));
     }
 
     private void showRequestedPattern() {

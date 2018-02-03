@@ -32,9 +32,10 @@ public class GameController {
     TextField TfInput;
 
     @FXML
-    public void checkUserInput(){
+    public void checkUserInput() throws IOException {
         if(TfInput.getText().toString().equals(selectedLause)){
             showResult("Õige");
+            ScoreSaverAndReader.save(GameStopper.getTimeInSecs());
         }else{
             showResult("Vale");
         }
@@ -72,7 +73,7 @@ public class GameController {
     }
 
     private void selectData() {
-        selectedLause = laused.remove(RandomSelector.select(laused));
+        selectedLause = laused.remove(RandomSelector.select(laused.size()));
     }
 
     private void loadDataFromFileToList() {
