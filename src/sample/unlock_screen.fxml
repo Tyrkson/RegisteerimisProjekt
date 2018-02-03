@@ -6,9 +6,9 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UnlockScreenController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UnlockScreenController">
     <children>
-        <AnchorPane fx:id="patternPane" layoutX="110.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="97.5" AnchorPane.rightAnchor="97.5" AnchorPane.topAnchor="40.0">
+        <AnchorPane fx:id="patternPane" layoutX="110.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" stylesheets="@unlockscrn.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="97.5" AnchorPane.rightAnchor="97.5" AnchorPane.topAnchor="40.0">
             <children>
                 <Label fx:id="lTime" layoutX="297.0" layoutY="14.0" text="AEG" textFill="WHITE" />
                 <AnchorPane fx:id="inputPane" layoutX="100.0" minHeight="400.0" minWidth="0.0" opacity="0.56" prefHeight="497.0" prefWidth="0.0" style="-fx-background-color: #7790ba;">
@@ -33,6 +33,7 @@
             <Circle fx:id="c2" fill="DODGERBLUE" layoutX="203.0" layoutY="400.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="187.0" />
             <Circle fx:id="c3" fill="DODGERBLUE" layoutX="304.0" layoutY="400.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="86.0" />
             <Circle fx:id="c1" fill="DODGERBLUE" layoutX="100.0" layoutY="400.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="85.0" />
+            <Label layoutX="189.0" layoutY="240.0" text="Kood" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
             </children>
         </AnchorPane>
         <Button layoutX="564.0" layoutY="40.0" mnemonicParsing="false" text="?" />

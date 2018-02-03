@@ -12,9 +12,6 @@ import javafx.util.Duration;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class GameController {
 
@@ -29,7 +26,7 @@ public class GameController {
     private int globalPace = -15;
 
     @FXML
-    Label LRequestedInput, LResult, lTime;
+    Label lRequestedInput, LResult, lTime;
 
     @FXML
     TextField TfInput;
@@ -71,7 +68,7 @@ public class GameController {
 
 
     private void showRequestInput() {
-      //  LRequestedInput.setText(selectedLause);
+        lRequestedInput.setText(selectedLause);
     }
 
     private void selectData() {

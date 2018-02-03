@@ -1,0 +1,44 @@
+#patternPane{
+
+
+<div class="option " id="option_868">
+
+						<div class="option_meta">
+															<div class="reg_count ">
+									<abbr title="Registreeritud inimesi / maksimaalne lubatud arv">1/∞</abbr>
+								</div>
+
+							<h2>Osalen</h2>
+
+
+
+						        									        		<div class="option_reg" style="visibility: hidden;">
+							        			<a href="https://tamme.ope.ee/registreeri/465#" class="register_in_option new_button grey" data-option_id="868">Registreeri siia</a>
+							        		</div>
+
+
+						        							        				<form method="post" action="https://tamme.ope.ee/registration/add?collection_id=465" class="register_form main_reg option_868" style="display: block;">
+					        					<input type="hidden" name="token" value="e6399633ebdab476096ce57f43dcb8713502008d">					        					<input type="hidden" name="data[Reg][option_id]" value="868">
+
+					        					<input type="submit" class="new_button blue float_right" value="Kinnita registreerimine">
+
+					        											        					<label>
+						        						<input type="text" class="text" name="data[Reg][notes]" placeholder="Märkmed/lisainfo (sinu nimi lisatakse automaatselt)" value="">
+						        					</label>
+
+					        				</form>
+
+
+
+						</div>
+
+													<p class="option_description">Palun registreeri kogu meekond korraga, lisades kõigi meeskonnaliikmete nimed ja klassid.</p>
+
+
+				        <div class="clear"></div>
+
+						<div class="registrations" id="option_868_registrations" style="display: none;">Laen…</div>
+
+					</div>
+					   }
+                          }
