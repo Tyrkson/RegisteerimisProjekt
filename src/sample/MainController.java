@@ -13,7 +13,7 @@ public class MainController {
 
     @FXML
     public void loadGameSheet() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("unlock-screen.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("unlock_screen.fxml"));
         GameStopper.start();
         rootPane.getChildren().setAll(pane);
     }

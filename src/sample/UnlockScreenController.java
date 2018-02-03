@@ -50,7 +50,6 @@ public class UnlockScreenController {
         patternPane.setOnMouseDragged(e->{
             if(userPattern == null) userPattern = new ArrayList<>();
             checkCollision(e.getX(), e.getY());
-
         });
 
         patternPane.setOnMouseReleased(e->{
@@ -69,8 +68,10 @@ public class UnlockScreenController {
 
     private void removeLines() {
 
-        for(Line l: lines){
-            patternPane.getChildren().remove(l);
+        if(lines != null) {
+            for (Line l : lines) {
+                patternPane.getChildren().remove(l);
+            }
         }
     }
 
@@ -93,6 +94,7 @@ public class UnlockScreenController {
             if((c.getCenterX() + c.getRadius()) > x && (c.getCenterX() - c.getRadius()) < x){
                 if((c.getCenterY() + c.getRadius()) > y && (c.getCenterY() - c.getRadius()) < y){
                     userPattern.add(c);
+                    System.out.println("COLLISION");
                     drawLine();
                 }
             }
@@ -157,7 +159,7 @@ public class UnlockScreenController {
         for(String i: selectedPattern){
             pattern += i + " ";
         }
-        lRequestedPattern.setText(pattern);
+       // lRequestedPattern.setText(pattern);
     }
 
     private boolean checkUserPattern(ArrayList<Circle> userPattern){

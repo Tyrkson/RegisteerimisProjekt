@@ -71,7 +71,7 @@ public class GameController {
 
 
     private void showRequestInput() {
-        LRequestedInput.setText(selectedLause);
+      //  LRequestedInput.setText(selectedLause);
     }
 
     private void selectData() {
