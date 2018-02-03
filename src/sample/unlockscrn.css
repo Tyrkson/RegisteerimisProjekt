@@ -1,6 +1,5 @@
-#patternPane{
-      -fx-background-image:url("/sample/pildid/bg1.png");
+#patternPane1{
+      -fx-background-image:url("/sample/pildid/bg3.png");
       -fx-background-repeat: stretch;
       -fx-background-size: 100% 100%;
     }
-}

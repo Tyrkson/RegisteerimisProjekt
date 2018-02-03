@@ -12,7 +12,7 @@ public class RandomSelector {
         int randIndex;
 
         if(size > 1) {
-            randIndex = random.nextInt(size - 1);
+            randIndex = random.nextInt(size);
         }else{
             randIndex = 0;
         }

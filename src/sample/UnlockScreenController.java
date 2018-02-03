@@ -7,8 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -47,6 +47,7 @@ public class UnlockScreenController {
     private String file = "patterns.txt";
 
     public void initialize(){
+        selectBackgroundImageRandomly();
         loadPatternDataFromFileToList();
         selectPattern();
         showRequestedPattern();
@@ -70,6 +71,40 @@ public class UnlockScreenController {
                 removeLines();
             }
         });
+    }
+
+    private void selectBackgroundImageRandomly() {
+        String fileName = "backgroundImages.txt";
+        ArrayList<String> backGroundImageFiles;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            String line = br.readLine();
+            backGroundImageFiles = new ArrayList<>();
+
+            while(line != null){
+                backGroundImageFiles.add(line);
+                line = br.readLine();
+            }
+            int randIndex = RandomSelector.select(backGroundImageFiles.size());
+            String imageFile = backGroundImageFiles.get(randIndex);
+            System.out.println(imageFile);
+
+            Image img = new Image("/sample/pildid/" + imageFile);
+
+            BackgroundImage bgImg = new BackgroundImage(img, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT,
+                    BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO,
+                    false, false, true, false));
+
+            Background bg = new Background(bgImg);
+
+            patternPane.setBackground(bg);
+
+        } catch (FileNotFoundException e) {
+            backGroundImageFiles = new ArrayList<>();
+        } catch (IOException e) {
+            backGroundImageFiles = new ArrayList<>();
+        }
+
     }
 
     private void removeLines() {
