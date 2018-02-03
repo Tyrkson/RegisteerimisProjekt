@@ -21,7 +21,7 @@ public class GameController {
 
     private String file = "andmed.txt";
 
-    Timeline timeline, inputPaneAnimation;
+    Timeline inputPaneAnimation;
 
     private int globalPace = -15;
 
