@@ -12,34 +12,34 @@
         <AnchorPane fx:id="patternPane" layoutX="110.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" stylesheets="@unlockscrn.css" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="59.0">
             <children>
                 <Label fx:id="lTime" layoutX="297.0" layoutY="14.0" text="AEG" textFill="WHITE" />
-                <AnchorPane fx:id="inputPane" layoutX="100.0" minHeight="400.0" minWidth="0.0" opacity="0.56" prefHeight="497.0" prefWidth="0.0" style="-fx-background-color: #7790ba;">
-                    <children>
-                        <Label text="Label" textFill="#478350" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                            <font>
-                                <Font size="23.0" />
-                            </font>
-                        </Label>
-                        <Label prefHeight="17.0" prefWidth="0.0" text="Label" textFill="#d72929" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
-                            <font>
-                                <Font size="29.0" />
-                            </font>
-                        </Label>
-                    </children></AnchorPane>
-            <Circle fx:id="c7" fill="DODGERBLUE" layoutX="101.0" layoutY="596.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="81.0" />
-            <Circle fx:id="c8" fill="DODGERBLUE" layoutX="203.0" layoutY="596.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="c9" fill="DODGERBLUE" layoutX="304.0" layoutY="596.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="c4" fill="DODGERBLUE" layoutX="100.0" layoutY="497.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="c5" fill="DODGERBLUE" layoutX="203.0" layoutY="497.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="c6" fill="DODGERBLUE" layoutX="304.0" layoutY="497.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="c2" fill="DODGERBLUE" layoutX="203.0" layoutY="400.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="187.0" />
-            <Circle fx:id="c3" fill="DODGERBLUE" layoutX="304.0" layoutY="400.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="86.0" />
-            <Circle fx:id="c1" fill="DODGERBLUE" layoutX="100.0" layoutY="400.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="85.0" />
-            <Label layoutX="189.0" layoutY="240.0" text="Kood" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+            <Circle fx:id="c7" fill="DODGERBLUE" layoutX="59.0" layoutY="503.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c9" fill="DODGERBLUE" layoutX="255.0" layoutY="503.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+               <Circle fx:id="c8" fill="DODGERBLUE" layoutX="156.0" layoutY="503.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c6" fill="DODGERBLUE" layoutX="255.0" layoutY="412.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c5" fill="DODGERBLUE" layoutX="156.0" layoutY="412.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c4" fill="DODGERBLUE" layoutX="59.0" layoutY="412.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c3" fill="DODGERBLUE" layoutX="255.0" layoutY="329.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c2" fill="DODGERBLUE" layoutX="156.0" layoutY="329.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="c1" fill="DODGERBLUE" layoutX="59.0" layoutY="329.0" opacity="0.7" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
             </children>
          <padding>
             <Insets bottom="60.0" />
          </padding>
         </AnchorPane>
+          <AnchorPane fx:id="inputPane" minHeight="400.0" minWidth="0.0" opacity="0.56" prefHeight="497.0" prefWidth="0.0" style="-fx-background-color: #7790ba;">
+              <children>
+                  <Label text="Label" textFill="#478350" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                      <font>
+                          <Font size="23.0" />
+                      </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="0.0" text="Label" textFill="#d72929" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                         <font>
+                          <Font size="29.0" />
+                      </font>
+                  </Label>
+              </children>
+      </AnchorPane>
         <Button layoutX="564.0" layoutY="40.0" mnemonicParsing="false" text="?" />
     </children>
 </AnchorPane>
