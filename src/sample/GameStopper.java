@@ -7,24 +7,19 @@ import javafx.util.Duration;
 
 public class GameStopper {
 
-    private static Timeline timeline;
-    private static int timeInSecs;
+    private static long startTime;
+    private static long time;
     private static boolean stopperState;
 
     private GameStopper(){}
 
     public static void start(){
         stopperState = true;
-        timeInSecs = 0;
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), e ->{
-            updateTime();
-        }));
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
+        startTime = System.currentTimeMillis();
     }
 
     public static void stop(){
-        timeline.stop();
+        time = System.currentTimeMillis()-startTime;
         stopperState = false;
     }
 
@@ -32,11 +27,8 @@ public class GameStopper {
         return stopperState;
     }
 
-    private static void updateTime() {
-        timeInSecs++;
-    }
 
-    public static int getTimeInSecs(){
-        return timeInSecs;
+    public static long getTime(){
+        return System.currentTimeMillis()-startTime;
     }
 }

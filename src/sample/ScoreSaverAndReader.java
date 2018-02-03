@@ -8,7 +8,7 @@ public class ScoreSaverAndReader {
 
     private ScoreSaverAndReader(){}
 
-    public static void save(int time) throws IOException {
+    public static void save(long time) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter("results.txt", true));
 
         bw.write(String.valueOf(time));
@@ -18,15 +18,15 @@ public class ScoreSaverAndReader {
 
     }
 
-    public static ArrayList<Integer> read() throws IOException {
+    public static ArrayList<Long> read() throws IOException {
         BufferedReader br =  new BufferedReader(new FileReader("results.txt"));
 
         String line = br.readLine();
 
-        ArrayList<Integer> results = new ArrayList<>();
+        ArrayList<Long> results = new ArrayList<>();
 
         while(line != null){
-            results.add(Integer.parseInt(line));
+            results.add(Long.parseLong(line));
             line = br.readLine();
         }
 

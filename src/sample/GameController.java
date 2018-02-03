@@ -34,16 +34,13 @@ public class GameController {
     @FXML
     public void checkUserInput() throws IOException {
         if(TfInput.getText().toString().equals(selectedLause)){
-            showResult("Õige");
-            ScoreSaverAndReader.save(GameStopper.getTimeInSecs());
+            ScoreSaverAndReader.save(GameStopper.getTime());
         }else{
-            showResult("Vale");
         }
         if(laused.isEmpty()){
-            showResult("Sõnad otsas");
             if(GameStopper.isRunning()) {
                 stopTimer();
-                lTime.setText(String.valueOf(GameStopper.getTimeInSecs()));
+                lTime.setText(String.valueOf(GameStopper.getTime()));
             }
         }else {
             selectData();
@@ -55,10 +52,6 @@ public class GameController {
         GameStopper.stop();
     }
 
-
-    private void showResult(String result) {
-        LResult.setText(result);
-    }
 
     public void initialize(){
         loadDataFromFileToList();

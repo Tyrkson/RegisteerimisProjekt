@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class ScoreboardController {
 
-    private ArrayList<Integer> results;
+    private ArrayList<Long> results;
 
     public void initialize() throws IOException {
         results = ScoreSaverAndReader.read();
