@@ -6,15 +6,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
    <children>
-      <AnchorPane fx:id="gamePane" layoutX="43.0" layoutY="32.0" prefHeight="720.0" prefWidth="405.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="97.2" AnchorPane.rightAnchor="97.2" AnchorPane.topAnchor="40.0">
+      <AnchorPane fx:id="gamePane" layoutX="97.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="97.39999999999998" AnchorPane.topAnchor="40.0">
          <children>
-            <Label layoutX="148.0" layoutY="52.0" prefHeight="17.0" prefWidth="149.0" text="Registreeri järelevastamisse" />
-            <TextField fx:id="TfInput" alignment="CENTER" layoutX="129.0" layoutY="150.0" />
-            <Label fx:id="LResult" layoutX="172.0" layoutY="460.0" text="Tulemused:" />
-            <Label fx:id="lTime" layoutX="297.0" layoutY="14.0" text="AEG" />
-            <Button layoutX="169.0" layoutY="249.0" mnemonicParsing="false" onAction="#checkUserInput" prefHeight="25.0" prefWidth="68.0" text="Button" />
+            <Label layoutX="41.0" layoutY="119.0" prefHeight="115.0" prefWidth="304.0" text="Neljapäeviti kuuenda tunni ajal saab järele vastata puudulikule hindele või puudumise tõttu tegemata jäänud olulisi töid. Enne registreerimist peab kindlasti aineõpetajaga konsulteerima ja vastamiseks loa saama. " textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true" />
+            <TextField fx:id="TfInput" alignment="CENTER" layoutX="24.0" layoutY="336.0" prefHeight="43.0" prefWidth="355.0" promptText="Kontrolltöö nimi ja kinnitan, et on õpetaja nõusolek olemas">
+               <font>
+                  <Font size="12.0" />
+               </font></TextField>
+            <Label fx:id="LResult" layoutX="41.0" layoutY="85.0" text="Tulemused:" />
+            <Button layoutX="83.0" layoutY="412.0" mnemonicParsing="false" onAction="#checkUserInput" prefHeight="25.0" prefWidth="68.0" text="Button" />
             <AnchorPane fx:id="inputPane" layoutX="100.0" minHeight="400.0" minWidth="0.0" opacity="0.56" prefHeight="672.0" prefWidth="0.0" style="-fx-background-color: #7790ba;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Label fx:id="lRequestedInput" text="Label" textFill="#478350" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -28,8 +30,15 @@
                      </font>
                   </Label>
                </children></AnchorPane>
+            <Label layoutX="50.0" layoutY="283.0" prefHeight="47.0" prefWidth="76.0" text="0/40">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="234.0" prefHeight="43.0" prefWidth="311.0" text="NB! Kui jäid registreerimisega hiljaks, aga õpetajaga on kokkulepe olemas, siis pead rääkima õppealajuhatajaga!" wrapText="true" />
          </children>
       </AnchorPane>
       <Button layoutX="564.0" layoutY="40.0" mnemonicParsing="false" onAction="#executeInputPaneAnimation" text="?" />
+      <Label fx:id="lTime" layoutX="528.0" layoutY="104.0" text="AEG" textFill="#da1818" />
    </children>
 </AnchorPane>

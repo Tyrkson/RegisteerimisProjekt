@@ -53,6 +53,7 @@ public class UnlockScreenController {
         });
 
         patternPane.setOnMouseReleased(e->{
+            if(userPattern == null) return;
             boolean result = checkUserPattern(userPattern);
             if(result){
                 try {
@@ -182,7 +183,7 @@ public class UnlockScreenController {
     }
 
     private void loadGameSheet() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("game.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("login.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 

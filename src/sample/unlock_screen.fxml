@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UnlockScreenController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UnlockScreenController">
     <children>
         <AnchorPane fx:id="patternPane" layoutX="110.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" stylesheets="@unlockscrn.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="97.5" AnchorPane.rightAnchor="97.5" AnchorPane.topAnchor="40.0">
             <children>
