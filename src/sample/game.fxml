@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #213049;" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameController">
    <children>
-      <AnchorPane fx:id="gamePane" layoutX="97.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="97.39999999999998" AnchorPane.topAnchor="40.0">
+      <AnchorPane fx:id="gamePane" layoutX="97.0" layoutY="40.0" prefHeight="720.0" prefWidth="405.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="59.0">
          <children>
             <Label layoutX="41.0" layoutY="119.0" prefHeight="115.0" prefWidth="304.0" text="Neljapäeviti kuuenda tunni ajal saab järele vastata puudulikule hindele või puudumise tõttu tegemata jäänud olulisi töid. Enne registreerimist peab kindlasti aineõpetajaga konsulteerima ja vastamiseks loa saama. " textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true" />
             <TextField fx:id="TfInput" alignment="CENTER" layoutX="24.0" layoutY="336.0" prefHeight="43.0" prefWidth="355.0" promptText="Kontrolltöö nimi ja kinnitan, et on õpetaja nõusolek olemas">
