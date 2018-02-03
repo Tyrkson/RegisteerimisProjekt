@@ -73,6 +73,8 @@ public class UnlockScreenController {
                 patternPane.getChildren().remove(l);
             }
         }
+        lines = null;
+        userPattern = null;
     }
 
     private void createCircleList() {
@@ -91,11 +93,12 @@ public class UnlockScreenController {
 
     private void checkCollision(double x, double y) {
         for(Circle c : circles){
-            if((c.getCenterX() + c.getRadius()) > x && (c.getCenterX() - c.getRadius()) < x){
-                if((c.getCenterY() + c.getRadius()) > y && (c.getCenterY() - c.getRadius()) < y){
-                    userPattern.add(c);
-                    System.out.println("COLLISION");
-                    drawLine();
+            if((c.getLayoutX() + c.getRadius()) > x && (c.getLayoutX() - c.getRadius()) < x){
+                if((c.getLayoutY() + c.getRadius()) > y && (c.getLayoutY() - c.getRadius()) < y){
+                    if(!userPattern.contains(c)) {
+                        userPattern.add(c);
+                        drawLine();
+                    }
                 }
             }
         }
@@ -117,13 +120,15 @@ public class UnlockScreenController {
 
         Line line = new Line();
 
-        line.setStartX(start.getCenterX());
-        line.setStartY(start.getCenterY());
-        line.setEndX(end.getCenterX());
-        line.setEndY(end.getCenterY());
+        line.setStartX(start.getLayoutX());
+        line.setStartY(start.getLayoutY());
+        line.setEndX(end.getLayoutX());
+        line.setEndY(end.getLayoutY());
 
         line.setStroke(Color.WHITE);
+        line.setStrokeWidth(10);
 
+        System.out.println("Drawn");
         patternPane.getChildren().add(line);
         lines.add(line);
     }
