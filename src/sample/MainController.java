@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,16 +10,25 @@ import java.io.IOException;
 
 public class MainController {
 
+
+
     @FXML
     private AnchorPane rootPane;
 
     @FXML
     private ImageView ivWhitePlay, ivWhiteExit;
 
+    private GameMeediaPlayer a;
+
+    public void initialize(){
+        a = new GameMeediaPlayer("PAtchimoo.mp3");
+        a.play();
+    }
+
     @FXML
     public void loadGameSheet() throws IOException{
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("unlock_screen.fxml"));
-        GameStopper.start();
+        a.stop();
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("countdown.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 

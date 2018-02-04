@@ -1,0 +1,6 @@
+#rootPane{
+      -fx-background-image:url("/sample/pildid/cntbg.png");
+      -fx-background-repeat: stretch;
+      -fx-background-size: 100% 100%;
+    }
+}

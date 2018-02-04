@@ -4,6 +4,7 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -32,24 +33,33 @@ public class GameController {
     TextField TfInput;
 
     @FXML
+    AnchorPane rootPane;
+
+    @FXML
     public void checkUserInput() throws IOException {
         if(TfInput.getText().toString().equals(selectedLause)){
-            ScoreSaverAndReader.save(GameStopper.getTime());
-        }else{
-        }
-        if(laused.isEmpty()){
-            if(GameStopper.isRunning()) {
-                stopTimer();
-                lTime.setText(String.valueOf(GameStopper.getTime()));
+            Game.finishedRound();
+            if(Game.isOver()){
+                loadMainMenuSheet();
+            }else{
+                startANewRound();
             }
-        }else {
-            selectData();
-            showRequestInput();
         }
     }
 
-    private void stopTimer() {
-        GameStopper.stop();
+    private void startANewRound() throws IOException {
+        Game.newRound();
+        loadUnlockScreenSheet();
+    }
+
+    private void loadUnlockScreenSheet() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("unlock_screen.fxml"));
+        rootPane.getChildren().setAll(pane);
+    }
+
+    private void loadMainMenuSheet() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("mein_menu.fxml"));
+        rootPane.getChildren().setAll(pane);
     }
 
 

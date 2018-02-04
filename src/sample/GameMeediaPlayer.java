@@ -10,7 +10,7 @@ public class GameMeediaPlayer{
     private MediaPlayer mediaplayer;
 
     GameMeediaPlayer(String songName){
-        mediasong = new Media(Paths.get(songName).toUri().toString());
+        mediasong = new Media(Paths.get("src/sample/Introsong/" + songName).toUri().toString());
         mediaplayer = new MediaPlayer(mediasong);
 
     }

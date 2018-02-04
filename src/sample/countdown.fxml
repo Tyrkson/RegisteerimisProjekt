@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CountdownController" fx:id="rootPane">
+   <children>
+      <ImageView fx:id="iv1" fitHeight="260.0" fitWidth="527.0" layoutX="37.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pildid/vaike.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv2" fitHeight="150.0" fitWidth="600.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@pildid/3.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv3" fitHeight="126.0" fitWidth="600.0" layoutX="4.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pildid/2.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv4" fitHeight="159.0" fitWidth="583.0" layoutX="9.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pildid/1.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="lStart" layoutX="181.0" layoutY="669.0" prefHeight="113.0" prefWidth="239.0" text="LÄKS!" textFill="RED" visible="false">
+         <font>
+            <Font name="Comic Sans MS" size="78.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
