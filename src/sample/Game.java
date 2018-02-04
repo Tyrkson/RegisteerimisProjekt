@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Game {
 
-    private static int roundsToPlay = 2;
+    private static int roundsToPlay = 1;
     private static ArrayList<Long> times;
     private static int finishedRounds;
 
@@ -37,5 +37,9 @@ public class Game {
 
     public static int getFinishedRounds(){
         return finishedRounds;
+    }
+
+    public static ArrayList<Long> getTimes(){
+        return times;
     }
 }
