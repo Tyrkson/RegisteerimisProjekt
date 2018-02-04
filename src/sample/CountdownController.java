@@ -30,7 +30,7 @@ public class CountdownController {
     private GameMeediaPlayer songPlayer;
 
     public void initialize(){
-        //startPlayer();
+        startPlayer();
         collectIvs();
         startImageAnimation();
 
