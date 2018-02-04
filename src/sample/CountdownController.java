@@ -26,7 +26,7 @@ public class CountdownController {
     private ArrayList<ImageView> ivs;
 
     Timeline timeline;
-    final int seconds = 1;
+    final int seconds = 4;
     private GameMeediaPlayer songPlayer;
 
     public void initialize(){
@@ -46,7 +46,7 @@ public class CountdownController {
     }
 
     private void startPlayer() {
-        songPlayer = new GameMeediaPlayer("LAULU NIMI SIIA");
+        songPlayer = new GameMeediaPlayer("muudjum.mp3");
         songPlayer.play();
     }
 
