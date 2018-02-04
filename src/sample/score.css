@@ -1,0 +1,6 @@
+#scorePane{
+      -fx-background-image:url("/sample/pildid/scorebg.png");
+      -fx-background-repeat: stretch;
+      -fx-background-size: 100% 100%;
+    }
+}

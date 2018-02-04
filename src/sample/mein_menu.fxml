@@ -25,5 +25,10 @@
             <Image url="@pildid/exit1_t.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="easter" fitHeight="280.0" fitWidth="252.0" layoutX="171.0" layoutY="14.0" onMouseClicked="#showEasterEgg" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pildid/Luukere.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

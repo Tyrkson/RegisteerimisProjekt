@@ -56,4 +56,16 @@ public class MainController {
     public void notVisibleExit(){
         ivWhiteExit.setVisible(false);
     }
+
+    @FXML
+    ImageView easter;
+
+    @FXML
+    public void showEasterEgg(){
+        if(easter.getOpacity() < 1){
+            easter.setOpacity(1);
+        }else{
+            easter.setOpacity(0);
+        }
+    }
 }
