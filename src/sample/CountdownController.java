@@ -26,7 +26,7 @@ public class CountdownController {
     private ArrayList<ImageView> ivs;
 
     Timeline timeline;
-    final int seconds = 5;
+    final int seconds = 1;
     private GameMeediaPlayer songPlayer;
 
     public void initialize(){

@@ -52,16 +52,16 @@
                   </Button>
                </children>
             </VBox>
-                <AnchorPane fx:id="inputPane" minWidth="0.0" opacity="0.56" prefHeight="499.0" prefWidth="0.0" style="-fx-background-color: #7790ba;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="inputPane" minWidth="0.0" prefHeight="499.0" prefWidth="0.0" style="-fx-background-color: #7790ba;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <Label fx:id="lRequestedInput1" text="Label" textFill="#478350" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <Label fx:id="lRequestedInput1" text="Label" textFill="#478350" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                             <font>
-                                <Font size="23.0" />
+                                <Font size="48.0" />
                             </font>
                         </Label>
-                        <Label fx:id="lRequestedInput2" prefHeight="17.0" prefWidth="0.0" text="Label" textFill="#d72929" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                        <Label fx:id="lRequestedInput2" prefHeight="17.0" prefWidth="0.0" text="Label" textFill="#d72929" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
                             <font>
-                                <Font size="29.0" />
+                                <Font size="48.0" />
                             </font>
                         </Label>
                     </children>
