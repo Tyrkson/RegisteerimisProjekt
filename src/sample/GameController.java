@@ -58,7 +58,7 @@ public class GameController {
     }
 
     private void loadMainMenuSheet() throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("mein_menu.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("feedback.fxml"));
         rootPane.getChildren().setAll(pane);
     }
 

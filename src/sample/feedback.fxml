@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="600.0" stylesheets="@feedback.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FeedbackController">
+   <children>
+      <Label layoutX="100.0" layoutY="252.0" prefHeight="21.0" prefWidth="166.0" text="Your best time:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lBest" layoutX="272.0" layoutY="252.0" prefHeight="35.0" prefWidth="97.0" text="Label">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="317.0" text="Average:">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lAverage" layoutX="216.0" layoutY="317.0" prefHeight="35.0" prefWidth="108.0" text="Label">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btMenu" defaultButton="true" layoutX="263.0" layoutY="515.0" mnemonicParsing="false" onAction="#loadMenuSheet" text="Menu">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
