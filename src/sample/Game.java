@@ -30,4 +30,12 @@ public class Game {
     public static void newRound() {
         GameStopper.start();
     }
+
+    public static int getRoundsToPlay(){
+        return roundsToPlay;
+    }
+
+    public static int getFinishedRounds(){
+        return finishedRounds;
+    }
 }

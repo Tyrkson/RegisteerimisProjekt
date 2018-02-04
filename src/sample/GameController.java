@@ -27,7 +27,7 @@ public class GameController {
     private int globalPace = -15;
 
     @FXML
-    Label lRequestedInput, LResult, lTime;
+    Label lRequestedInput, lRound, lTime;
 
     @FXML
     TextField TfInput;
@@ -67,8 +67,14 @@ public class GameController {
         loadDataFromFileToList();
         selectData();
         showRequestInput();
+        updateRoundLabel();
     }
 
+    private void updateRoundLabel() {
+        int finishedRounds = Game.getFinishedRounds();
+        int roundsToPlay = Game.getRoundsToPlay();
+        lRound.setText(finishedRounds + "/" + roundsToPlay);
+    }
 
 
     private void showRequestInput() {
