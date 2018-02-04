@@ -23,13 +23,8 @@
                         <Font size="86.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="17.0" prefWidth="0.0" text="Label" textFill="#d72929" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
-                     <font>
-                        <Font size="29.0" />
-                     </font>
-                  </Label>
                </children></AnchorPane>
-            <Label layoutX="52.0" layoutY="268.0" prefHeight="47.0" prefWidth="76.0" text="0/40">
+            <Label fx:id="lRound" layoutX="52.0" layoutY="268.0" prefHeight="47.0" prefWidth="76.0" text="0/40">
                <font>
                   <Font size="32.0" />
                </font>
